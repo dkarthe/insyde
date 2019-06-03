@@ -1,0 +1,34 @@
+<nav class="nav u-sizeFullWidth u-fontSizeSmaller u-relative u-container u-bgColor">
+    <div class="u-flex u-flexCenter u-headerColorLink u-maxWidth1100 u-marginAuto">
+        {{!-- Logo --}}
+        <div class="nav-left u-flex0">
+            <a class="nav-logo u-textColorWhite u-block u-lineHeight1 godo-tracking" href="{{@site.url}}" data-event-category="Header" data-event-action="Logo" data-event-label="Click" data-event-non-interaction="true">
+                {{#if @site.logo}}
+                    <img src="{{img_url @site.logo size="m"}}" alt="{{@site.title}}"/>
+                {{else}}
+                    <span class="u-fontSize28 u-fontWeightBold">{{@site.title}}</span>
+                {{/if}}
+            </a>
+        </div>
+
+        {{!-- Navigation --}}
+        <div class="nav-menu u-flex u-flex1 u-paddingRight20 u-flexCenter u-hide-before-lg">{{navigation}}</div>
+
+        <div class="nav-right u-flex0 u-flex u-flexEnd">
+            {{!-- Social Media --}}
+            <aside class="follow followMe u-fontSize20 u-flex u-hide-before-lg">
+                {{#if @site.facebook}}<a class="godo-tracking i-facebook" data-event-category="Header" data-event-action="Social" data-event-label="Facebook" data-event-non-interaction="true" title="Facebook {{@site.facebook}}" href="{{facebook_url}}" target="_blank" rel="noopener noreferrer"></a>{{/if}}
+                {{#if @site.twitter}}<a class="godo-tracking i-twitter" data-event-category="Header" data-event-action="Social" data-event-label="Twitter" data-event-non-interaction="true" title="Twitter {{@site.twitter}}" href="{{twitter_url}}" target="_blank" rel="noopener noreferrer"></a>{{/if}}
+                <a href="https://instagram.com/dkaarthik/" title="Instagram" target="_blank" rel="noopener noreferrer" class="i-instagram"></a>
+                <a href="https://github.com/dkarthe" title="GitHub" target="_blank" rel="noopener noreferrer" class="i-github"></a>
+                <a href="https://feedly.com/i/subscription/feed/{{@site.url}}/rss/" title="Rss" target="_blank" rel="noopener noreferrer" class="i-rss"></a>
+                <a itemprop="email" href="mailto:me@kd.ax">@</a>
+            </aside>
+
+            {{!-- Toggle Searcg --}}
+            <div class="search-toggle u-fontSizeLarge i-search u-hide godo-tracking" data-event-category="Header" data-event-action="Search" data-event-label="Click" data-event-non-interaction="true"></div>
+            {{!-- Toggle Menu --}}
+            <div class="menu-toggle u-relative u-hide-after-lg"><span></span><span></span><span></span></div>
+        </div>
+    </div>
+</nav>
